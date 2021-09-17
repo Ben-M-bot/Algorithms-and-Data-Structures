@@ -50,7 +50,7 @@ class APQ:
             result = result + ", " + str(i)
         return result
 
-    def bubbleUp(self, i):
+    def bubbleUp(self, i): # Checks if the element is smaller than the elements above it and if so swaps them until it is in the right place
         if i != 0:
             if self._body[i] < self._body[(i - 1) // 2]:
                 t = self._body[(i - 1) // 2]
@@ -93,7 +93,7 @@ class APQ:
         self.bubbleUp(e.index())
         return e
 
-    def remove_min(self):
+    def remove_min(self): #removes the smallest element/ the very top one
         elem = self.min()
         self._body[0] = self._body[self.length() - 1]
         self._body[0]._index = 0
@@ -111,7 +111,7 @@ class APQ:
         return self.get_elem(element).key()
 
 
-    def update_key(self, element, key):
+    def update_key(self, element, key): # Allows you to update the key of the element
         old = element.key()
         element.set_key(key)
         if old < key:
@@ -119,7 +119,7 @@ class APQ:
         else:
             self.bubbleUp(element.index())
 
-    def remove(self, element):
+    def remove(self, element): #Removes the elements from the APQ
         i = element.index()
         t = self._body[self.length() - 1]
         t._index = i
