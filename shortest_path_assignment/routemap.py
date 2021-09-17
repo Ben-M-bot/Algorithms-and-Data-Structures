@@ -372,7 +372,7 @@ class RouteMap:
         self.read_result(ls2)
         return ls2
 
-# def graphreader(filename):
+# def graphreader(filename): #Provided by the lecturer
 #     """ Read and return the route map in filename. """
 #     graph = RouteMap()
 #     file = open(filename, 'r')
