@@ -1,6 +1,8 @@
 from apq import *
 
 
+#O utput can be put into GPSVisualiser to get a visual representation of the path.
+
 class Vertex:
     """ A Vertex in a graph. """
 
@@ -403,7 +405,7 @@ class RouteMap:
 #     return graph
 if __name__ == "__main__":
     g = RouteMap("corkCityData.txt")
-    source = g.get_vertex_by_label(1669466540)
+    source = g.get_vertex_by_label(1669466540) #from WGB to Neptune stadium
     dest = g.get_vertex_by_label(348809726)
     g.sp(source, dest)
 
